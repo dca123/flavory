@@ -1,4 +1,5 @@
 "use client";
+
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -14,15 +15,18 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { onSubmit } from "./action";
+import { useTransition } from "react";
 
 const Schema = z.object({
   name: z.string().min(3).max(255),
   description: z.string().min(3).max(255),
   price: z.number().min(0.01).max(999.99),
 });
-type Schema = z.infer<typeof Schema>;
+export type Schema = z.infer<typeof Schema>;
 
-export default function Home() {
+export default function Page() {
+  const [isPending, startTransition] = useTransition();
   const form = useForm<Schema>({
     resolver: zodResolver(Schema),
     defaultValues: {
@@ -31,15 +35,14 @@ export default function Home() {
       price: "" as unknown as number,
     },
   });
-  const onSubmit = (data: Schema) => {
-    console.log(data);
-  };
+
+  const handleSubmit = (data: Schema) => startTransition(() => onSubmit(data));
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24 space-y-16">
       <h1 className="text-6xl font-bold text-center">Add Item to Menu</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
           <FormField
             control={form.control}
             name="name"
@@ -95,7 +98,10 @@ export default function Home() {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+
+          <Button type="submit">
+            {isPending ? "Saving ..." : "Create Item"}
+          </Button>
         </form>
       </Form>
     </main>

@@ -63,6 +63,9 @@ importers:
       '@hookform/resolvers':
         specifier: ^3.1.1
         version: 3.1.1(react-hook-form@7.44.3)
+      '@planetscale/database':
+        specifier: ^1.7.0
+        version: 1.7.0
       '@radix-ui/react-label':
         specifier: ^2.0.2
         version: 2.0.2(@types/react-dom@18.2.5)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
@@ -89,7 +92,7 @@ importers:
         version: 1.2.1
       drizzle-orm:
         specifier: ^0.26.5
-        version: 0.26.5
+        version: 0.26.5(@planetscale/database@1.7.0)
       eslint:
         specifier: ^8.42.0
         version: 8.42.0
@@ -133,6 +136,9 @@ importers:
       drizzle-kit:
         specifier: ^0.18.1
         version: 0.18.1
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
 
   packages/eslint-config-custom:
     dependencies:
@@ -589,6 +595,11 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       tslib: 2.5.0
+    dev: false
+
+  /@planetscale/database@1.7.0:
+    resolution: {integrity: sha512-lWR6biXChUyQnxsT4RT1CIeR3ZJvwTQXiQ+158MnY3VjLwjHEGakDzdH9kwUGPk6CHvu6UeqRXp1DgUOVHJFTw==}
+    engines: {node: '>=16'}
     dev: false
 
   /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.12)(react@18.2.0):
@@ -1093,7 +1104,7 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.21.8
+      browserslist: 4.21.9
       caniuse-lite: 1.0.30001503
       fraction.js: 4.2.0
       normalize-range: 0.1.2
@@ -1168,15 +1179,15 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /browserslist@4.21.8:
-    resolution: {integrity: sha512-j+7xYe+v+q2Id9qbBeCI8WX5NmZSRe8es1+0xntD/+gaWXznP8tFEkv5IgSaHf5dS1YwVMbX/4W6m937mj+wQw==}
+  /browserslist@4.21.9:
+    resolution: {integrity: sha512-M0MFoZzbUrRU4KNfCrDLnvyE7gub+peetoTid3TBIqtunaDJyXlwhakT+/VkvSXcfIzFfK/nkCs4nmyTmxdNSg==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001503
       electron-to-chromium: 1.4.431
       node-releases: 2.0.12
-      update-browserslist-db: 1.0.11(browserslist@4.21.8)
+      update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: false
 
   /buffer@5.7.1:
@@ -1600,7 +1611,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.26.5:
+  /drizzle-orm@0.26.5(@planetscale/database@1.7.0):
     resolution: {integrity: sha512-ajjbOIoXqldWoWBn0RbVQCCT732R4Ad+gUjUrlmMpzWYwgnbG/qqPy84NhHntQ/MR//z3xfvT1Z2fD8uCAPX3g==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1661,6 +1672,8 @@ packages:
         optional: true
       sqlite3:
         optional: true
+    dependencies:
+      '@planetscale/database': 1.7.0
     dev: false
 
   /electron-to-chromium@1.4.431:
@@ -4716,13 +4729,13 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /update-browserslist-db@1.0.11(browserslist@4.21.8):
+  /update-browserslist-db@1.0.11(browserslist@4.21.9):
     resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
-      browserslist: 4.21.8
+      browserslist: 4.21.9
       escalade: 3.1.1
       picocolors: 1.0.0
     dev: false

@@ -7,6 +7,5 @@ const connection = connect({
   username: process.env["DATABASE_USERNAME"],
   password: process.env["DATABASE_PASSWORD"],
 });
-console.log("🚀 ~ file: drizzle.ts:10 ~ connection:", connection);
 
 export const db = drizzle(connection);

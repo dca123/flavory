@@ -13,15 +13,10 @@
     "@planetscale/database": "^1.7.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
-    "@types/node": "^20.3.1",
-    "@types/react": "18.2.12",
-    "@types/react-dom": "18.2.5",
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "drizzle-orm": "^0.26.5",
-    "eslint": "^8.42.0",
-    "eslint-config-next": "^13.4.5",
     "lucide-react": "^0.244.0",
     "next": "^13.4.5",
     "postcss": "8.4.24",
@@ -35,7 +30,11 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
     "drizzle-kit": "^0.18.1",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*"
   }
 }

@@ -42,7 +42,7 @@ export async function Menu(props: MenuProps) {
   return (
     <div className="grid grid-cols-3 gap-3">
       {menuItems.map((item) => (
-        <div className="border rounded p-5 w-fit max-w-lg">
+        <div className="border rounded p-5 w-fit max-w-lg" key={item.id}>
           <h1 className="text-2xl font-medium">{item.name}</h1>
           <p className="text-sm text-slate-200">${item.price}</p>
           <p className="text-md font-light text-slate-400 pt-2">

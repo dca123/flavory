@@ -4,12 +4,11 @@ import { MenuItems } from "./items";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 space-y-4">
-      <div>
-        <h1 className="text-6xl font-bold text-center">Menu</h1>
-      </div>
-
-      <Link href="/menu/create" className="text-xl p-2 border-2 rounded">
+    <>
+      <Link
+        href="/menu/create"
+        className="text-xl p-2 border-2 rounded self-end"
+      >
         Create Item
       </Link>
       <Suspense
@@ -21,6 +20,6 @@ export default function Page() {
       >
         <MenuItems />
       </Suspense>
-    </main>
+    </>
   );
 }

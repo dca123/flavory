@@ -12,3 +12,9 @@ export const items = mysqlTable("items", {
   description: text("description"),
   price: float("price"),
 });
+
+export const restaurants = mysqlTable("restaurants", {
+  id: serial("id").primaryKey(),
+  name: varchar("name", { length: 256 }),
+  description: text("description"),
+});

@@ -1,14 +1,14 @@
 {
-  "name": "user-web",
+  "name": "restaurant-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
+ "dependencies": {
     "@hookform/resolvers": "^3.1.1",
     "@planetscale/database": "^1.7.0",
     "@radix-ui/react-label": "^2.0.2",

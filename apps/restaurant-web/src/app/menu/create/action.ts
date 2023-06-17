@@ -1,6 +1,5 @@
 "use server";
-import { db } from "@/lib/drizzle";
-import { items } from "@/lib/schema";
+import { db, items } from "db";
 import { Schema } from "./page";
 import { redirect } from "next/navigation";
 

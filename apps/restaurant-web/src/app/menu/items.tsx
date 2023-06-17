@@ -1,5 +1,4 @@
-import { db } from "@/lib/drizzle";
-import { items } from "@/lib/schema";
+import { db, items } from "db";
 
 export const MenuItems = async () => {
   const dbItems = await db.select().from(items);

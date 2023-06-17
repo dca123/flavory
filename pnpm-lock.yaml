@@ -51,6 +51,9 @@ importers:
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
+      db:
+        specifier: workspace:*
+        version: link:../../packages/db
       lucide-react:
         specifier: ^0.244.0
         version: 0.244.0(react@18.2.0)

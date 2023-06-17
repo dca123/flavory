@@ -1,69 +1,16 @@
 import { db } from "./drizzle";
 import { items, restaurants } from "./schema";
+import { faker } from "@faker-js/faker";
+import itemData from "./seedData/items.json";
 
 async function seedItems() {
-  const newItems = await db.insert(items).values([
-    {
-      name: "Classic Cheeseburger",
-      description:
-        "A juicy beef patty topped with melted cheddar cheese, served on a toasted bun with lettuce, tomato, and pickles.",
-      price: 10.99,
-    },
-    {
-      name: "Margherita Pizza",
-      description:
-        "Thin crust pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves, drizzled with olive oil.",
-      price: 12.99,
-    },
-    {
-      name: "Grilled Chicken Caesar Salad",
-      description:
-        "Grilled chicken breast on a bed of crisp romaine lettuce, tossed with creamy Caesar dressing, croutons, and Parmesan cheese.",
-      price: 9.99,
-    },
-    {
-      name: "Penne Pasta Alfredo",
-      description:
-        "Penne pasta tossed in a creamy Alfredo sauce, garnished with Parmesan cheese and fresh parsley.",
-      price: 11.99,
-    },
-    {
-      name: "BBQ Ribs",
-      description:
-        "Tender and succulent pork ribs slathered in a tangy BBQ sauce, served with coleslaw and fries.",
-      price: 15.99,
-    },
-    {
-      name: "Vegetarian Pad Thai",
-      description:
-        "Stir-fried rice noodles with tofu, bean sprouts, carrots, bell peppers, and peanuts, in a flavorful Pad Thai sauce.",
-      price: 10.99,
-    },
-    {
-      name: "Fish and Chips",
-      description:
-        "Crispy beer-battered fish fillets served with golden fries, tartar sauce, and a side of coleslaw.",
-      price: 13.99,
-    },
-    {
-      name: "Spinach and Feta Stuffed Chicken Breast",
-      description:
-        "Grilled chicken breast stuffed with sautéed spinach and creamy feta cheese, served with roasted potatoes and seasonal vegetables.",
-      price: 14.99,
-    },
-    {
-      name: "Beef Tacos",
-      description:
-        "Soft corn tortillas filled with seasoned ground beef, topped with shredded lettuce, diced tomatoes, cheese, and salsa.",
-      price: 8.99,
-    },
-    {
-      name: "Chocolate Lava Cake",
-      description:
-        "Warm, gooey chocolate cake with a molten chocolate center, served with a scoop of vanilla ice cream.",
-      price: 6.99,
-    },
-  ]);
+  const restaurants = await db.query.restaurants.findMany();
+  const newItems = await db.insert(items).values(
+    itemData.map((item) => ({
+      ...item,
+      restaurantId: faker.helpers.arrayElement(restaurants).id,
+    }))
+  );
   console.log(newItems);
 }
 
@@ -127,8 +74,8 @@ async function seed() {
   await db.delete(items);
   await db.delete(restaurants);
 
-  await seedItems();
   await seedRestaurants();
+  await seedItems();
 }
 
 void seed();

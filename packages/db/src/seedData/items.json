@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Classic Cheeseburger",
+    "description": "A juicy beef patty topped with melted cheddar cheese, served on a toasted bun with lettuce, tomato, and pickles.",
+    "price": 10.99
+  },
+  {
+    "name": "Margherita Pizza",
+    "description": "Thin crust pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves, drizzled with olive oil.",
+    "price": 12.99
+  },
+  {
+    "name": "Grilled Chicken Caesar Salad",
+    "description": "Grilled chicken breast on a bed of crisp romaine lettuce, tossed with creamy Caesar dressing, croutons, and Parmesan cheese.",
+    "price": 9.99
+  },
+  {
+    "name": "Penne Pasta Alfredo",
+    "description": "Penne pasta tossed in a creamy Alfredo sauce, garnished with Parmesan cheese and fresh parsley.",
+    "price": 11.99
+  },
+  {
+    "name": "BBQ Ribs",
+    "description": "Tender and succulent pork ribs slathered in a tangy BBQ sauce, served with coleslaw and fries.",
+    "price": 15.99
+  },
+  {
+    "name": "Vegetarian Pad Thai",
+    "description": "Stir-fried rice noodles with tofu, bean sprouts, carrots, bell peppers, and peanuts, in a flavorful Pad Thai sauce.",
+    "price": 10.99
+  },
+  {
+    "name": "Fish and Chips",
+    "description": "Crispy beer-battered fish fillets served with golden fries, tartar sauce, and a side of coleslaw.",
+    "price": 13.99
+  },
+  {
+    "name": "Spinach and Feta Stuffed Chicken Breast",
+    "description": "Grilled chicken breast stuffed with sautéed spinach and creamy feta cheese, served with roasted potatoes and seasonal vegetables.",
+    "price": 14.99
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Soft corn tortillas filled with seasoned ground beef, topped with shredded lettuce, diced tomatoes, cheese, and salsa.",
+    "price": 8.99
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "description": "Warm, gooey chocolate cake with a molten chocolate center, served with a scoop of vanilla ice cream.",
+    "price": 6.99
+  },
+  {
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken cutlets topped with marinara sauce and melted mozzarella cheese, served with spaghetti.",
+    "price": 13.99
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce tossed in creamy Caesar dressing, topped with croutons and shaved Parmesan cheese.",
+    "price": 7.99
+  },
+  {
+    "name": "Beef Stir Fry",
+    "description": "Tender beef strips sautéed with a colorful medley of vegetables, served over steamed rice.",
+    "price": 12.99
+  },
+  {
+    "name": "Caprese Salad",
+    "description": "Fresh mozzarella cheese, ripe tomatoes, and basil leaves drizzled with balsamic glaze and olive oil.",
+    "price": 9.99
+  },
+  {
+    "name": "Shrimp Scampi",
+    "description": "Succulent shrimp sautéed in a garlic and butter sauce, served over linguine pasta.",
+    "price": 16.99
+  },
+  {
+    "name": "Vegetable Curry",
+    "description": "A flavorful blend of assorted vegetables simmered in a fragrant curry sauce, served with basmati rice.",
+    "price": 11.99
+  },
+  {
+    "name": "Chicken Satay Skewers",
+    "description": "Grilled marinated chicken skewers served with a creamy peanut sauce and cucumber relish.",
+    "price": 9.99
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with sautéed mushrooms, Parmesan cheese, and a hint of truffle oil.",
+    "price": 10.99
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "A comforting bowl of chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "price": 8.99
+  },
+  {
+    "name": "Cheese Quesadilla",
+    "description": "A grilled flour tortilla filled with melted cheese, served with salsa and sour cream.",
+    "price": 7.99
+  },
+  {
+    "name": "Steak Fajitas",
+    "description": "Sizzling strips of marinated steak with sautéed onions and bell peppers, served with warm tortillas, guacamole, and pico de gallo.",
+    "price": 15.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Chicken Shawarma",
+    "description": "Tender marinated chicken wrapped in a warm pita bread with garlic sauce, tomatoes, lettuce, and pickles.",
+    "price": 10.99
+  },
+  {
+    "name": "Pesto Pasta",
+    "description": "Penne pasta tossed in a flavorful basil pesto sauce, garnished with sun-dried tomatoes and Parmesan cheese.",
+    "price": 11.99
+  },
+  {
+    "name": "Sushi Combo",
+    "description": "An assortment of sushi rolls, nigiri, and sashimi, served with soy sauce, wasabi, and pickled ginger.",
+    "price": 18.99
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "description": "Delicious pizza topped with ham, pineapple chunks, and melted mozzarella cheese.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken pieces cooked in a rich tomato-based sauce with aromatic spices, served with basmati rice and naan bread.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Salad",
+    "description": "A refreshing salad with crisp lettuce, cucumbers, cherry tomatoes, red onions, Kalamata olives, and feta cheese, drizzled with lemon vinaigrette.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Burrito",
+    "description": "A flour tortilla filled with seasoned ground beef, rice, black beans, cheese, lettuce, and salsa, served with sour cream and guacamole.",
+    "price": 10.99
+  },
+  {
+    "name": "Lemon Herb Roasted Chicken",
+    "description": "Tender roasted chicken with a zesty lemon and herb marinade, served with roasted potatoes and steamed vegetables.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy fried spring rolls filled with a mix of shredded vegetables, served with sweet chili sauce.",
+    "price": 6.99
+  },
+  {
+    "name": "Beef and Broccoli Stir Fry",
+    "description": "Sliced beef stir-fried with broccoli florets in a savory sauce, served over steamed rice.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Enchiladas",
+    "description": "Corn tortillas filled with shredded chicken, topped with enchilada sauce and melted cheese, served with Mexican rice and refried beans.",
+    "price": 11.99
+  },
+  {
+    "name": "Falafel Wrap",
+    "description": "Crispy falafel balls wrapped in a warm pita bread with tahini sauce, lettuce, tomatoes, and cucumbers.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Pho",
+    "description": "A comforting Vietnamese noodle soup with thinly sliced beef, rice noodles, bean sprouts, and fresh herbs in a flavorful broth.",
+    "price": 10.99
+  },
+  {
+    "name": "Caprese Panini",
+    "description": "Grilled panini sandwich with fresh mozzarella cheese, sliced tomatoes, and basil leaves, drizzled with balsamic glaze.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Fried Rice",
+    "description": "Stir-fried rice with diced chicken, vegetables, and scrambled eggs, seasoned with soy sauce and sesame oil.",
+    "price": 9.99
+  },
+  {
+    "name": "Lobster Bisque",
+    "description": "A creamy and flavorful soup made with tender lobster meat, aromatic spices, and a hint of sherry.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing wrapped in a flour tortilla.",
+    "price": 9.99
+  },
+  {
+    "name": "Vegetable Lasagna",
+    "description": "Layers of pasta, marinara sauce, assorted vegetables, and melted cheese, baked to perfection.",
+    "price": 11.99
+  },
+  {
+    "name": "Lemon Garlic Shrimp Pasta",
+    "description": "Linguine pasta tossed with plump shrimp, garlic, lemon juice, and parsley, finished with a sprinkle of Parmesan cheese.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Tandoori",
+    "description": "Tender chicken marinated in yogurt and spices, grilled to perfection, and served with basmati rice and naan bread.",
+    "price": 13.99
+  },
+  {
+    "name": "Caprese Skewers",
+    "description": "Skewers with fresh cherry tomatoes, mozzarella cheese, and basil leaves, drizzled with balsamic glaze and olive oil.",
+    "price": 7.99
+  },
+  {
+    "name": "Pork Chops",
+    "description": "Grilled pork chops seasoned with herbs and spices, served with mashed potatoes and sautéed vegetables.",
+    "price": 15.99
+  },
+  {
+    "name": "Vegetable Biryani",
+    "description": "Fragrant basmati rice cooked with an assortment of vegetables, aromatic spices, and saffron, served with raita.",
+    "price": 10.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Stroganoff",
+    "description": "Tender strips of beef cooked in a creamy mushroom sauce, served over egg noodles.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Teriyaki",
+    "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce, served with steamed rice and stir-fried vegetables.",
+    "price": 11.99
+  },
+  {
+    "name": "Margherita Salad",
+    "description": "Fresh mozzarella cheese, sliced roma tomatoes, and basil leaves drizzled with balsamic glaze and olive oil, served over mixed greens.",
+    "price": 8.99
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Soft corn tortillas filled with seasoned ground beef, topped with shredded lettuce, diced tomatoes, cheese, and salsa.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Alfredo",
+    "description": "Grilled chicken breast served over fettuccine pasta, tossed in a creamy Parmesan Alfredo sauce.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetarian Nachos",
+    "description": "Crispy tortilla chips topped with melted cheese, black beans, diced tomatoes, jalapeños, and sour cream.",
+    "price": 9.99
+  },
+  {
+    "name": "Shrimp Stir Fry",
+    "description": "Succulent shrimp stir-fried with a medley of vegetables in a savory sauce, served over steamed rice.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Moussaka",
+    "description": "Layers of eggplant, ground lamb, and béchamel sauce baked to perfection, served with a side salad.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Shawarma Platter",
+    "description": "Tender marinated chicken served with rice, hummus, tabbouleh, and pita bread.",
+    "price": 15.99
+  },
+  {
+    "name": "Penne Arrabbiata",
+    "description": "Penne pasta tossed in a spicy tomato sauce with garlic, chili flakes, and fresh basil.",
+    "price": 10.99
+  },
+  {
+    "name": "Clam Chowder",
+    "description": "A creamy and hearty soup made with fresh clams, potatoes, onions, and celery.",
+    "price": 11.99
+  },
+  {
+    "name": "Vegetable Curry",
+    "description": "A flavorful blend of assorted vegetables simmered in a fragrant curry sauce, served with basmati rice.",
+    "price": 11.99
+  },
+  {
+    "name": "Chicken Satay Skewers",
+    "description": "Grilled marinated chicken skewers served with a creamy peanut sauce and cucumber relish.",
+    "price": 9.99
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with sautéed mushrooms, Parmesan cheese, and a hint of truffle oil.",
+    "price": 10.99
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "A comforting bowl of chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "price": 8.99
+  },
+  {
+    "name": "Cheese Quesadilla",
+    "description": "A grilled flour tortilla filled with melted cheese, served with salsa and sour cream.",
+    "price": 7.99
+  },
+  {
+    "name": "Steak Fajitas",
+    "description": "Sizzling strips of marinated steak with sautéed onions and bell peppers, served with warm tortillas, guacamole, and pico de gallo.",
+    "price": 15.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Chicken Shawarma",
+    "description": "Tender marinated chicken wrapped in a warm pita bread with garlic sauce, tomatoes, lettuce, and pickles.",
+    "price": 10.99
+  },
+  {
+    "name": "Pesto Pasta",
+    "description": "Penne pasta tossed in a flavorful basil pesto sauce, garnished with sun-dried tomatoes and Parmesan cheese.",
+    "price": 11.99
+  },
+  {
+    "name": "Sushi Combo",
+    "description": "An assortment of sushi rolls, nigiri, and sashimi, served with soy sauce, wasabi, and pickled ginger.",
+    "price": 18.99
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "description": "Delicious pizza topped with ham, pineapple chunks, and melted mozzarella cheese.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken pieces cooked in a rich tomato-based sauce with aromatic spices, served with basmati rice and naan bread.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Salad",
+    "description": "A refreshing salad with crisp lettuce, cucumbers, cherry tomatoes, red onions, Kalamata olives, and feta cheese, drizzled with lemon vinaigrette.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Burrito",
+    "description": "A flour tortilla filled with seasoned ground beef, rice, black beans, cheese, lettuce, and salsa, served with sour cream and guacamole.",
+    "price": 10.99
+  },
+  {
+    "name": "Lemon Herb Roasted Chicken",
+    "description": "Tender roasted chicken with a zesty lemon and herb marinade, served with roasted potatoes and steamed vegetables.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy fried spring rolls filled with a mix of shredded vegetables, served with sweet chili sauce.",
+    "price": 6.99
+  },
+  {
+    "name": "Beef and Broccoli Stir Fry",
+    "description": "Sliced beef stir-fried with broccoli florets in a savory sauce, served over steamed rice.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Enchiladas",
+    "description": "Corn tortillas filled with shredded chicken, topped with enchilada sauce and melted cheese, served with Mexican rice and refried beans.",
+    "price": 11.99
+  },
+  {
+    "name": "Falafel Wrap",
+    "description": "Crispy falafel balls wrapped in a warm pita bread with tahini sauce, lettuce, tomatoes, and cucumbers.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Pho",
+    "description": "A comforting Vietnamese noodle soup with thinly sliced beef, rice noodles, bean sprouts, and fresh herbs in a flavorful broth.",
+    "price": 10.99
+  },
+  {
+    "name": "Caprese Panini",
+    "description": "Grilled panini sandwich with fresh mozzarella cheese, sliced tomatoes, and basil leaves, drizzled with balsamic glaze.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Fried Rice",
+    "description": "Stir-fried rice with diced chicken, vegetables, and scrambled eggs, seasoned with soy sauce and sesame oil.",
+    "price": 9.99
+  },
+  {
+    "name": "Lobster Bisque",
+    "description": "A creamy and flavorful soup made with tender lobster meat, aromatic spices, and a hint of sherry.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing wrapped in a flour tortilla.",
+    "price": 9.99
+  },
+  {
+    "name": "Vegetable Lasagna",
+    "description": "Layers of pasta, marinara sauce, assorted vegetables, and melted cheese, baked to perfection.",
+    "price": 11.99
+  },
+  {
+    "name": "Lemon Garlic Shrimp Pasta",
+    "description": "Linguine pasta tossed with plump shrimp, garlic, lemon juice, and parsley, finished with a sprinkle of Parmesan cheese.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Tandoori",
+    "description": "Tender chicken marinated in yogurt and spices, grilled to perfection, and served with basmati rice and naan bread.",
+    "price": 13.99
+  },
+  {
+    "name": "Caprese Skewers",
+    "description": "Skewers with fresh cherry tomatoes, mozzarella cheese, and basil leaves, drizzled with balsamic glaze and olive oil.",
+    "price": 7.99
+  },
+  {
+    "name": "Pork Chops",
+    "description": "Grilled pork chops seasoned with herbs and spices, served with mashed potatoes and sautéed vegetables.",
+    "price": 15.99
+  },
+  {
+    "name": "Vegetable Biryani",
+    "description": "Fragrant basmati rice cooked with an assortment of vegetables, aromatic spices, and saffron, served with raita.",
+    "price": 10.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Stroganoff",
+    "description": "Tender strips of beef cooked in a creamy mushroom sauce, served over egg noodles.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Teriyaki",
+    "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce, served with steamed rice and stir-fried vegetables.",
+    "price": 11.99
+  },
+  {
+    "name": "Margherita Salad",
+    "description": "Fresh mozzarella cheese, sliced roma tomatoes, and basil leaves drizzled with balsamic glaze and olive oil, served over mixed greens.",
+    "price": 8.99
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Soft corn tortillas filled with seasoned ground beef, topped with shredded lettuce, diced tomatoes, cheese, and salsa.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Alfredo",
+    "description": "Grilled chicken breast served over fettuccine pasta, tossed in a creamy Parmesan Alfredo sauce.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetarian Nachos",
+    "description": "Crispy tortilla chips topped with melted cheese, black beans, diced tomatoes, jalapeños, and sour cream.",
+    "price": 9.99
+  },
+  {
+    "name": "Shrimp Stir Fry",
+    "description": "Succulent shrimp stir-fried with a medley of vegetables in a savory sauce, served over steamed rice.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Moussaka",
+    "description": "Layers of eggplant, ground lamb, and béchamel sauce baked to perfection, served with a side salad.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Shawarma Platter",
+    "description": "Tender marinated chicken served with rice, hummus, tabbouleh, and pita bread.",
+    "price": 15.99
+  },
+  {
+    "name": "Penne Arrabbiata",
+    "description": "Penne pasta tossed in a spicy tomato sauce with garlic, chili flakes, and fresh basil.",
+    "price": 10.99
+  },
+  {
+    "name": "Clam Chowder",
+    "description": "A creamy and hearty soup made with fresh clams, potatoes, onions, and celery.",
+    "price": 11.99
+  },
+  {
+    "name": "Vegetable Curry",
+    "description": "A flavorful blend of assorted vegetables simmered in a fragrant curry sauce, served with basmati rice.",
+    "price": 11.99
+  },
+  {
+    "name": "Chicken Satay Skewers",
+    "description": "Grilled marinated chicken skewers served with a creamy peanut sauce and cucumber relish.",
+    "price": 9.99
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with sautéed mushrooms, Parmesan cheese, and a hint of truffle oil.",
+    "price": 10.99
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "A comforting bowl of chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "price": 8.99
+  },
+  {
+    "name": "Cheese Quesadilla",
+    "description": "A grilled flour tortilla filled with melted cheese, served with salsa and sour cream.",
+    "price": 7.99
+  },
+  {
+    "name": "Steak Fajitas",
+    "description": "Sizzling strips of marinated steak with sautéed onions and bell peppers, served with warm tortillas, guacamole, and pico de gallo.",
+    "price": 15.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Chicken Shawarma",
+    "description": "Tender marinated chicken wrapped in a warm pita bread with garlic sauce, tomatoes, lettuce, and pickles.",
+    "price": 10.99
+  },
+  {
+    "name": "Pesto Pasta",
+    "description": "Penne pasta tossed in a flavorful basil pesto sauce, garnished with sun-dried tomatoes and Parmesan cheese.",
+    "price": 11.99
+  },
+  {
+    "name": "Sushi Combo",
+    "description": "An assortment of sushi rolls, nigiri, and sashimi, served with soy sauce, wasabi, and pickled ginger.",
+    "price": 18.99
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "description": "Delicious pizza topped with ham, pineapple chunks, and melted mozzarella cheese.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken pieces cooked in a rich tomato-based sauce with aromatic spices, served with basmati rice and naan bread.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Salad",
+    "description": "A refreshing salad with crisp lettuce, cucumbers, cherry tomatoes, red onions, Kalamata olives, and feta cheese, drizzled with lemon vinaigrette.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Burrito",
+    "description": "A flour tortilla filled with seasoned ground beef, rice, black beans, cheese, lettuce, and salsa, served with sour cream and guacamole.",
+    "price": 10.99
+  },
+  {
+    "name": "Lemon Herb Roasted Chicken",
+    "description": "Tender roasted chicken with a zesty lemon and herb marinade, served with roasted potatoes and steamed vegetables.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy fried spring rolls filled with a mix of shredded vegetables, served with sweet chili sauce.",
+    "price": 6.99
+  },
+  {
+    "name": "Beef and Broccoli Stir Fry",
+    "description": "Sliced beef stir-fried with broccoli florets in a savory sauce, served over steamed rice.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Enchiladas",
+    "description": "Corn tortillas filled with shredded chicken, topped with enchilada sauce and melted cheese, served with Mexican rice and refried beans.",
+    "price": 11.99
+  },
+  {
+    "name": "Falafel Wrap",
+    "description": "Crispy falafel balls wrapped in a warm pita bread with tahini sauce, lettuce, tomatoes, and cucumbers.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Pho",
+    "description": "A comforting Vietnamese noodle soup with thinly sliced beef, rice noodles, bean sprouts, and fresh herbs in a flavorful broth.",
+    "price": 10.99
+  },
+  {
+    "name": "Caprese Panini",
+    "description": "Grilled panini sandwich with fresh mozzarella cheese, sliced tomatoes, and basil leaves, drizzled with balsamic glaze.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Fried Rice",
+    "description": "Stir-fried rice with diced chicken, vegetables, and scrambled eggs, seasoned with soy sauce and sesame oil.",
+    "price": 9.99
+  },
+  {
+    "name": "Lobster Bisque",
+    "description": "A creamy and flavorful soup made with tender lobster meat, aromatic spices, and a hint of sherry.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing wrapped in a flour tortilla.",
+    "price": 9.99
+  },
+  {
+    "name": "Vegetable Lasagna",
+    "description": "Layers of pasta, marinara sauce, assorted vegetables, and melted cheese, baked to perfection.",
+    "price": 11.99
+  },
+  {
+    "name": "Lemon Garlic Shrimp Pasta",
+    "description": "Linguine pasta tossed with plump shrimp, garlic, lemon juice, and parsley, finished with a sprinkle of Parmesan cheese.",
+    "price": 14.99
+  },
+  {
+    "name": "Chicken Tandoori",
+    "description": "Tender chicken marinated in yogurt and spices, grilled to perfection, and served with basmati rice and naan bread.",
+    "price": 13.99
+  },
+  {
+    "name": "Caprese Skewers",
+    "description": "Skewers with fresh cherry tomatoes, mozzarella cheese, and basil leaves, drizzled with balsamic glaze and olive oil.",
+    "price": 7.99
+  },
+  {
+    "name": "Pork Chops",
+    "description": "Grilled pork chops seasoned with herbs and spices, served with mashed potatoes and sautéed vegetables.",
+    "price": 15.99
+  },
+  {
+    "name": "Vegetable Biryani",
+    "description": "Fragrant basmati rice cooked with an assortment of vegetables, aromatic spices, and saffron, served with raita.",
+    "price": 10.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Stroganoff",
+    "description": "Tender strips of beef cooked in a creamy mushroom sauce, served over egg noodles.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Teriyaki",
+    "description": "Grilled chicken glazed with a sweet and savory teriyaki sauce, served with steamed rice and stir-fried vegetables.",
+    "price": 11.99
+  },
+  {
+    "name": "Margherita Salad",
+    "description": "Fresh mozzarella cheese, sliced roma tomatoes, and basil leaves drizzled with balsamic glaze and olive oil, served over mixed greens.",
+    "price": 8.99
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Soft corn tortillas filled with seasoned ground beef, topped with shredded lettuce, diced tomatoes, cheese, and salsa.",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Alfredo",
+    "description": "Grilled chicken breast served over fettuccine pasta, tossed in a creamy Parmesan Alfredo sauce.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetarian Nachos",
+    "description": "Crispy tortilla chips topped with melted cheese, black beans, diced tomatoes, jalapeños, and sour cream.",
+    "price": 9.99
+  },
+  {
+    "name": "Shrimp Stir Fry",
+    "description": "Succulent shrimp stir-fried with a medley of vegetables in a savory sauce, served over steamed rice.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Moussaka",
+    "description": "Layers of eggplant, ground lamb, and béchamel sauce baked to perfection, served with a side salad.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Shawarma Platter",
+    "description": "Tender marinated chicken served with rice, hummus, tabbouleh, and pita bread.",
+    "price": 15.99
+  },
+  {
+    "name": "Penne Arrabbiata",
+    "description": "Penne pasta tossed in a spicy tomato sauce with garlic, chili flakes, and fresh basil.",
+    "price": 10.99
+  },
+  {
+    "name": "Clam Chowder",
+    "description": "A creamy and hearty soup made with fresh clams, potatoes, onions, and celery.",
+    "price": 11.99
+  },
+  {
+    "name": "Vegetable Curry",
+    "description": "A flavorful blend of assorted vegetables simmered in a fragrant curry sauce, served with basmati rice.",
+    "price": 11.99
+  },
+  {
+    "name": "Chicken Satay Skewers",
+    "description": "Grilled marinated chicken skewers served with a creamy peanut sauce and cucumber relish.",
+    "price": 9.99
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with sautéed mushrooms, Parmesan cheese, and a hint of truffle oil.",
+    "price": 10.99
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "A comforting bowl of chicken noodle soup with tender chicken, vegetables, and egg noodles.",
+    "price": 8.99
+  },
+  {
+    "name": "Cheese Quesadilla",
+    "description": "A grilled flour tortilla filled with melted cheese, served with salsa and sour cream.",
+    "price": 7.99
+  },
+  {
+    "name": "Steak Fajitas",
+    "description": "Sizzling strips of marinated steak with sautéed onions and bell peppers, served with warm tortillas, guacamole, and pico de gallo.",
+    "price": 15.99
+  },
+  {
+    "name": "Margherita Flatbread",
+    "description": "Crispy flatbread topped with fresh basil, mozzarella cheese, and sliced roma tomatoes, drizzled with balsamic glaze.",
+    "price": 9.99
+  },
+  {
+    "name": "Chicken Shawarma",
+    "description": "Tender marinated chicken wrapped in a warm pita bread with garlic sauce, tomatoes, lettuce, and pickles.",
+    "price": 10.99
+  },
+  {
+    "name": "Pesto Pasta",
+    "description": "Penne pasta tossed in a flavorful basil pesto sauce, garnished with sun-dried tomatoes and Parmesan cheese.",
+    "price": 11.99
+  },
+  {
+    "name": "Sushi Combo",
+    "description": "An assortment of sushi rolls, nigiri, and sashimi, served with soy sauce, wasabi, and pickled ginger.",
+    "price": 18.99
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "description": "Delicious pizza topped with ham, pineapple chunks, and melted mozzarella cheese.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken pieces cooked in a rich tomato-based sauce with aromatic spices, served with basmati rice and naan bread.",
+    "price": 14.99
+  },
+  {
+    "name": "Greek Salad",
+    "description": "A refreshing salad with crisp lettuce, cucumbers, cherry tomatoes, red onions, Kalamata olives, and feta cheese, drizzled with lemon vinaigrette.",
+    "price": 9.99
+  },
+  {
+    "name": "Beef Burrito",
+    "description": "A flour tortilla filled with seasoned ground beef, rice, black beans, cheese, lettuce, and salsa, served with sour cream and guacamole.",
+    "price": 10.99
+  },
+  {
+    "name": "Lemon Herb Roasted Chicken",
+    "description": "Tender roasted chicken with a zesty lemon and herb marinade, served with roasted potatoes and steamed vegetables.",
+    "price": 13.99
+  },
+  {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy fried spring rolls filled with a mix of shredded vegetables, served with sweet chili sauce.",
+    "price": 6.99
+  },
+  {
+    "name": "Beef and Broccoli Stir Fry",
+    "description": "Sliced beef stir-fried with broccoli florets in a savory sauce, served over steamed rice.",
+    "price": 12.99
+  },
+  {
+    "name": "Chicken Enchiladas",
+    "description": "Corn tortillas filled with shredded chicken, topped with enchilada sauce and melted cheese, served with Mexican rice and refried beans.",
+    "price": 11.99
+  },
+  {
+    "name": "Falafel Wrap",
+    "description": "Crispy falafel balls wrapped in a warm pita bread with tahini sauce, lettuce, tomatoes, and cucumbers.",
+    "price": 10.99
+  }
+]

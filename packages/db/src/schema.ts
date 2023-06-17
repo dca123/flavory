@@ -13,7 +13,7 @@ export const items = mysqlTable("items", {
   name: varchar("name", { length: 256 }),
   description: text("description"),
   price: float("price"),
-  restaurantId: serial("restaurantId"),
+  restaurantId: int("restaurantId"),
 });
 export const itemsRelations = relations(items, ({ one }) => ({
   restaurant: one(restaurants, {

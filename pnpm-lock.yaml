@@ -127,6 +127,9 @@ importers:
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
+      db:
+        specifier: workspace:*
+        version: link:../../packages/db
       lucide-react:
         specifier: ^0.244.0
         version: 0.244.0(react@18.2.0)
@@ -192,6 +195,9 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
     devDependencies:
+      '@faker-js/faker':
+        specifier: ^8.0.2
+        version: 8.0.2
       '@types/node':
         specifier: ^20.3.1
         version: 20.3.1
@@ -319,6 +325,11 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+
+  /@faker-js/faker@8.0.2:
+    resolution: {integrity: sha512-Uo3pGspElQW91PCvKSIAXoEgAUlRnH29sX2/p89kg7sP1m2PzCufHINd0FhTXQf6DYGiUlVncdSPa2F9wxed2A==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
+    dev: true
 
   /@hookform/resolvers@3.1.1(react-hook-form@7.44.3):
     resolution: {integrity: sha512-tS16bAUkqjITNSvbJuO1x7MXbn7Oe8ZziDTJdA9mMvsoYthnOOiznOTGBYwbdlYBgU+tgpI/BtTU3paRbCuSlg==}

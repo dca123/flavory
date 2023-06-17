@@ -17,16 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center p-24 space-y-4">
-          <h1 className="text-6xl font-bold text-center">
-            Your Restaurant Name Here
-          </h1>
+        <main className="flex min-h-screen flex-col items-center p-24 space-y-8">
+          <h1 className="text-6xl font-bold text-center">Flavory</h1>
           <div className="space-x-4">
             <Link href="/" className="text-xl">
-              Orders
-            </Link>
-            <Link href="/menu" className="text-xl">
-              Menu
+              Restaurants
             </Link>
           </div>
           {children}

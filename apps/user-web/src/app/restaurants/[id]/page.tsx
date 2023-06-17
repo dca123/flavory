@@ -30,6 +30,6 @@ export async function generateStaticParams() {
   const restaurants = await db.query.restaurants.findMany();
 
   return restaurants.map((post) => ({
-    id: post.id,
+    id: String(post.id),
   }));
 }

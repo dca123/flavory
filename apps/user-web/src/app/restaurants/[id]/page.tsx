@@ -35,7 +35,7 @@ async function Header(props: HeaderProps) {
   );
 }
 type MenuProps = { restaurantId: number };
-export async function Menu(props: MenuProps) {
+async function Menu(props: MenuProps) {
   const menuItems = await db.query.items.findMany({
     where: (items, { eq }) => eq(items.restaurantId, props.restaurantId),
   });

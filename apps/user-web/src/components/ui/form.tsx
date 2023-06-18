@@ -8,11 +8,15 @@ import {
   FieldPath,
   FieldValues,
   FormProvider,
+  UseFormProps,
   useFormContext,
+  useForm as useRhForm,
 } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
+import { z } from "zod";
 
 const Form = FormProvider;
 
@@ -166,7 +170,20 @@ const FormMessage = React.forwardRef<
 });
 FormMessage.displayName = "FormMessage";
 
+function useForm<TSchema extends z.ZodType>(
+  props: Omit<UseFormProps<TSchema["_input"]>, "resolver"> & {
+    schema: TSchema;
+  }
+) {
+  const form = useRhForm<TSchema["_input"]>({
+    ...props,
+    resolver: zodResolver(props.schema, undefined),
+  });
+
+  return form;
+}
 export {
+  useForm,
   useFormField,
   Form,
   FormItem,

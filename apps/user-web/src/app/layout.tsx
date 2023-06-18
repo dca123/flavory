@@ -24,6 +24,8 @@ export default function RootLayout({
               Restaurants
             </Link>
           </div>
+          <div className="border-t border-gray-700 my-4 h-1 w-[30%]"></div>
+
           {children}
         </main>
       </body>

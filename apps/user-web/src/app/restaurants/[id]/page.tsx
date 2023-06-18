@@ -1,6 +1,13 @@
 import { db, eq, items, restaurants } from "db";
+import { PlusCircle } from "lucide-react";
 import { Suspense } from "react";
+import { OrderBar, OrderForm } from "./components";
+import { useForm } from "@/components/ui/form";
+import { z } from "zod";
 
+const Schema = z.object({
+  items: z.string().array(),
+});
 export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className="space-y-8">
@@ -13,6 +20,7 @@ export default function Page({ params }: { params: { id: string } }) {
           <Menu restaurantId={Number(params.id)} />
         </Suspense>
       </div>
+      <OrderBar />
     </div>
   );
 }
@@ -34,6 +42,7 @@ async function Header(props: HeaderProps) {
     </div>
   );
 }
+
 type MenuProps = { restaurantId: number };
 async function Menu(props: MenuProps) {
   const menuItems = await db.query.items.findMany({
@@ -41,23 +50,15 @@ async function Menu(props: MenuProps) {
   });
   return (
     <div className="grid grid-cols-3 gap-3">
-      {menuItems.map((item) => (
-        <div className="border rounded p-5 w-fit max-w-lg" key={item.id}>
-          <h1 className="text-2xl font-medium">{item.name}</h1>
-          <p className="text-sm text-slate-200">${item.price}</p>
-          <p className="text-md font-light text-slate-400 pt-2">
-            {item.description}
-          </p>
-        </div>
-      ))}
+      <OrderForm items={menuItems} />
     </div>
   );
 }
 
-export async function generateStaticParams() {
-  const restaurants = await db.query.restaurants.findMany();
+// export async function generateStaticParams() {
+//   const restaurants = await db.query.restaurants.findMany();
 
-  return restaurants.map((post) => ({
-    id: String(post.id),
-  }));
-}
+//   return restaurants.map((post) => ({
+//     id: String(post.id),
+//   }));
+// }

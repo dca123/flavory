@@ -1,13 +1,10 @@
-import { db, eq, items, restaurants } from "db";
-import { PlusCircle } from "lucide-react";
+import { db, eq, restaurants } from "db";
 import { Suspense } from "react";
 import { OrderBar, OrderForm } from "./components";
-import { useForm } from "@/components/ui/form";
-import { z } from "zod";
+import { createOrder } from "./createOrder";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
 
-const Schema = z.object({
-  items: z.string().array(),
-});
 export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className="space-y-8">
@@ -20,7 +17,7 @@ export default function Page({ params }: { params: { id: string } }) {
           <Menu restaurantId={Number(params.id)} />
         </Suspense>
       </div>
-      <OrderBar />
+      <OrderBar createOrder={createOrder} />
     </div>
   );
 }
@@ -29,6 +26,9 @@ type HeaderProps = {
   restaurantId: number;
 };
 async function Header(props: HeaderProps) {
+  const session = await getServerSession(authOptions);
+  console.log("🚀 ~ file: page.tsx:8 ~ Page ~ session:", session);
+
   const restaurant = await db.query.restaurants.findFirst({
     where: eq(restaurants.id, props.restaurantId),
   });

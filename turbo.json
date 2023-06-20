@@ -4,9 +4,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NEXTAUTH_SECRET"]
     },
-    "lint": {},
+    "lint": {
+    },
     "dev": {
       "cache": false,
       "persistent": true

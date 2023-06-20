@@ -31,3 +31,21 @@ export const restaurants = mysqlTable("restaurants", {
 export const restaurantsRelations = relations(restaurants, ({ many }) => ({
   items: many(items),
 }));
+
+export const orders = mysqlTable("orders", {
+  id: serial("id").primaryKey(),
+  restaurantId: int("restaurantId").notNull(),
+});
+
+export const orderItems = mysqlTable("orderItems", {
+  id: serial("id").primaryKey(),
+  orderId: int("orderId").notNull(),
+  itemId: int("itemId").notNull(),
+});
+export const orderItemsRelations = relations(orderItems, ({ one, many }) => ({
+  order: one(orders, {
+    fields: [orderItems.orderId],
+    references: [orders.id],
+  }),
+  items: many(items),
+}));

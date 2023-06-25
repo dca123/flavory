@@ -35,7 +35,19 @@ export const restaurantsRelations = relations(restaurants, ({ many }) => ({
 export const orders = mysqlTable("orders", {
   id: serial("id").primaryKey(),
   restaurantId: int("restaurantId").notNull(),
+  customerId: int("customerId").notNull(),
 });
+export const ordersRelations = relations(orders, ({ one, many }) => ({
+  restaurant: one(restaurants, {
+    fields: [orders.restaurantId],
+    references: [restaurants.id],
+  }),
+  items: many(items),
+  customer: one(users, {
+    fields: [orders.customerId],
+    references: [users.id],
+  }),
+}));
 
 export const orderItems = mysqlTable("orderItems", {
   id: serial("id").primaryKey(),
@@ -49,3 +61,9 @@ export const orderItemsRelations = relations(orderItems, ({ one, many }) => ({
   }),
   items: many(items),
 }));
+
+export const users = mysqlTable("customers", {
+  id: serial("id").primaryKey(),
+  email: varchar("email", { length: 256 }).notNull(),
+  passwordHash: varchar("passwordHash", { length: 256 }).notNull(),
+});

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,10 +27,20 @@ export default function RootLayout({
             </Link>
           </div>
           <div className="border-t border-gray-700 my-4 h-1 w-[30%]"></div>
-
-          {children}
+          <AuthWrapper>{children}</AuthWrapper>
         </main>
       </body>
     </html>
   );
 }
+
+type AuthWrapperProps = {
+  children: React.ReactNode;
+};
+const AuthWrapper = async (props: AuthWrapperProps) => {
+  const session = await getServerSession(authOptions);
+  if (session !== null) {
+    return <>{props.children}</>;
+  }
+  return <h1>Not Authenticated</h1>;
+};

@@ -6,13 +6,17 @@ import {
   text,
   serial,
   int,
+  decimal,
 } from "drizzle-orm/mysql-core";
 
 export const items = mysqlTable("items", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 256 }).notNull(),
   description: text("description").notNull(),
-  price: float("price").notNull(),
+  price: decimal("price", {
+    scale: 2,
+    precision: 10,
+  }).notNull(),
   restaurantId: int("restaurantId").notNull(),
 });
 export type Item = InferModel<typeof items>;
@@ -59,7 +63,10 @@ export const orderItemsRelations = relations(orderItems, ({ one, many }) => ({
     fields: [orderItems.orderId],
     references: [orders.id],
   }),
-  items: many(items),
+  item: one(items, {
+    fields: [orderItems.itemId],
+    references: [items.id],
+  }),
 }));
 
 export const users = mysqlTable("customers", {

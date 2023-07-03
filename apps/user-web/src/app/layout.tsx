@@ -20,7 +20,10 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <main className="flex min-h-screen flex-col items-center p-24 space-y-8">
-          <h1 className="text-6xl font-bold text-center">Flavory</h1>
+          <div className="flex flex-row  justify-between items-center w-full">
+            <h1 className="text-lg font-bold text-center">Flavory</h1>
+            <Menu />
+          </div>
           <div className="space-x-4">
             <Link href="/" className="text-xl">
               Restaurants
@@ -33,6 +36,20 @@ export default function RootLayout({
     </html>
   );
 }
+
+const Menu = async () => {
+  const session = await getServerSession(authOptions);
+  console.log("🚀 ~ file: layout.tsx:40 ~ Menu ~ session:", session);
+  if (session !== null) {
+    return (
+      <div className="flex space-x-4 ">
+        <h1>{session.user?.email}</h1>
+        <Link href="/api/auth/signout">Sign Out</Link>
+      </div>
+    );
+  }
+  return <Link href="/api/auth/signin">Sign In</Link>;
+};
 
 type AuthWrapperProps = {
   children: React.ReactNode;

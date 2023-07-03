@@ -22,26 +22,32 @@ export const authOptions: AuthOptions = {
         const user = await db.query.users.findFirst({
           where: eq(users.email, credentials.email),
         });
-        console.log(user);
         if (user && user.passwordHash === credentials.password) {
-          // Any object returned will be saved in `user` property of the JWT
-          console.log("🚀 ~ file: route.ts:15 ~ authorize ~ user:", user);
-          const { id, ...rest } = user;
-
           return {
-            id: String(id),
+            id: user.id,
             email: user.email,
           };
         } else {
           console.log("password wrong");
-          // If you return null then an error will be displayed advising the user to check their details.
           return null;
-
-          // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
         }
       },
     }),
   ],
+  callbacks: {
+    jwt: async ({ token, user, account }) => {
+      if (account) {
+        token.id = user?.id;
+      }
+      return token;
+    },
+    session: ({ session, token }) => {
+      if (session.user) {
+        session.user.id = token.id;
+      }
+      return session;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);

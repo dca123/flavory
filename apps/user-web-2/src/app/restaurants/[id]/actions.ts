@@ -3,7 +3,6 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Item, db, orderItems, orders } from "db";
 import { getServerSession } from "next-auth";
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function createOrder(items: Item[], restaurantId: number) {

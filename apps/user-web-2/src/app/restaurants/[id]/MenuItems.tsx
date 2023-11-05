@@ -1,15 +1,8 @@
-"use client";
-
-import { Item as ItemModel } from "db";
-import { PlusCircle, MinusCircle } from "lucide-react";
-import { atom, useAtomValue, useSetAtom } from "jotai";
-import currency from "currency.js";
-import { useTransition } from "react";
-import { useParams } from "next/navigation";
-
-type OrderFormProps = {
-  items: ItemModel[];
-};
+'use client';
+import type { Item as ItemModel } from 'db';
+import { atom, useAtomValue, useSetAtom } from 'jotai';
+import currency from 'currency.js';
+import { MinusCircle, PlusCircle } from 'lucide-react';
 
 const ItemsAtom = atom<ItemModel[]>([]);
 const addToItemsAtom = atom(null, (get, set, item: ItemModel) => {
@@ -18,23 +11,28 @@ const addToItemsAtom = atom(null, (get, set, item: ItemModel) => {
 const removeFromItemsAtom = atom(null, (get, set, item: ItemModel) => {
   set(
     ItemsAtom,
-    get(ItemsAtom).filter((i) => i.id !== item.id)
+    get(ItemsAtom).filter((i) => i.id !== item.id),
   );
 });
 const orderSumAtom = atom((get) => {
   return get(ItemsAtom).reduce(
     (acc, item) => currency(acc).add(item.price).value,
-    0
+    0,
   );
 });
 
-export function OrderForm(props: OrderFormProps) {
+type OrderFormProps = {
+  items: ItemModel[];
+};
+
+export function MenuItems(props: OrderFormProps) {
   return props.items.map((item) => <ItemCard item={item} key={item.id} />);
 }
 type ItemCardProps = {
   item: ItemModel;
 };
-const ItemCard = (props: ItemCardProps) => {
+
+function ItemCard(props: ItemCardProps) {
   const items = useAtomValue(ItemsAtom);
   const addToOrder = useSetAtom(addToItemsAtom);
   const removeFromOrder = useSetAtom(removeFromItemsAtom);
@@ -73,33 +71,4 @@ const ItemCard = (props: ItemCardProps) => {
       </p>
     </div>
   );
-};
-type OrderBarProps = {
-  createOrder: (items: ItemModel[], restaurantId: number) => Promise<void>;
-};
-export const OrderBar = (props: OrderBarProps) => {
-  const cost = useAtomValue(orderSumAtom);
-  const items = useAtomValue(ItemsAtom);
-  const [isPending, startTransition] = useTransition();
-  const { id } = useParams();
-
-  if (cost === 0) {
-    return null;
-  }
-
-  return (
-    <div className="fixed w-full left-0 bottom-4 flex justify-center">
-      <div className="w-[80%] p-4 rounded border border-slate-200 bg-slate-950 flex flex-row space-x-4 items-center justify-end">
-        <h1 className="text-2xl">${cost}</h1>
-        <button
-          className="p-2 border rounded border-white"
-          onClick={() =>
-            startTransition(() => props.createOrder(items, Number(id)))
-          }
-        >
-          {isPending ? "Creating Order" : "Checkout"}
-        </button>
-      </div>
-    </div>
-  );
-};
+}

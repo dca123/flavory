@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    typedRoutes: true,
-    swcPlugins: [["@swc-jotai/react-refresh", {}]],
-  },
-};
+const nextConfig = {}
 
-module.exports = nextConfig;
+module.exports = nextConfig

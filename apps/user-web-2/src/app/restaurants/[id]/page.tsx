@@ -1,7 +1,6 @@
-import { db, eq, restaurants } from "db";
-import { Suspense } from "react";
-import { OrderBar, OrderForm } from "./components";
-import { createOrder } from "./createOrder";
+import { db, eq, restaurants } from 'db';
+import { Suspense } from 'react';
+import { MenuItems } from './MenuItems';
 
 export default function Page({ params }: { params: { id: string } }) {
   return (
@@ -15,7 +14,6 @@ export default function Page({ params }: { params: { id: string } }) {
           <Menu restaurantId={Number(params.id)} />
         </Suspense>
       </div>
-      <OrderBar createOrder={createOrder} />
     </div>
   );
 }
@@ -28,7 +26,7 @@ async function Header(props: HeaderProps) {
     where: eq(restaurants.id, props.restaurantId),
   });
   if (restaurant === undefined) {
-    throw new Error("Restaurant not found");
+    throw new Error('Restaurant not found');
   }
   return (
     <div className="flex flex-col space-y-2">
@@ -45,7 +43,7 @@ async function Menu(props: MenuProps) {
   });
   return (
     <div className="grid grid-cols-3 gap-3">
-      <OrderForm items={menuItems} />
+      <MenuItems items={menuItems} />
     </div>
   );
 }

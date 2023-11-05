@@ -11,14 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@planetscale/database": "^1.7.0",
-    "dotenv": "^16.3.0",
-    "drizzle-orm": "^0.26.5",
+    "@planetscale/database": "^1.11.0",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
     "tsconfig": "workspace:*"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.0.2",
-    "@types/node": "^20.3.1",
-    "drizzle-kit": "^0.18.1"
+    "@faker-js/faker": "^8.2.0",
+    "@types/node": "^20.8.10",
+    "drizzle-kit": "^0.19.13"
   }
 }

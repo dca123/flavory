@@ -1,19 +1,15 @@
 import { db, eq, restaurants } from 'db';
-import { Suspense } from 'react';
 import { MenuItems } from './MenuItems';
 import { OrderBar } from './OrderBar';
+import { OrderProvider } from './OrderProvider';
 
 export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className="space-y-8">
-      <Suspense>
-        <Header restaurantId={Number(params.id)} />
-      </Suspense>
+      <Header restaurantId={+params.id} />
       <div className="space-y-4">
         <h2 className="text-2xl font-bold">Menu</h2>
-        <Suspense>
-          <Menu restaurantId={Number(params.id)} />
-        </Suspense>
+        <Menu restaurantId={+params.id} />
       </div>
     </div>
   );
@@ -44,16 +40,10 @@ async function Menu(props: MenuProps) {
   });
   return (
     <div className="grid grid-cols-3 gap-3">
-      <MenuItems items={menuItems} />
-      <OrderBar />
+      <OrderProvider>
+        <MenuItems items={menuItems} />
+        <OrderBar />
+      </OrderProvider>
     </div>
   );
 }
-
-// export async function generateStaticParams() {
-//   const restaurants = await db.query.restaurants.findMany();
-
-//   return restaurants.map((post) => ({
-//     id: String(post.id),
-//   }));
-// }

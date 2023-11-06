@@ -29,7 +29,7 @@ export default function RootLayout({
               Restaurants
             </Link>
           </div>
-          <div className="border-t border-gray-700 my-4 h-1 w-[30%]"></div>
+          <div className="border-t border-gray-700 my-4 h-1 w-[30%]" />
           <AuthWrapper>{children}</AuthWrapper>
         </main>
       </body>
@@ -43,6 +43,7 @@ const Menu = async () => {
   if (session !== null) {
     return (
       <div className="flex space-x-4 ">
+        <Link href="/orders">My Orders</Link>
         <h1>{session.user?.email}</h1>
         <Link href="/api/auth/signout">Sign Out</Link>
       </div>

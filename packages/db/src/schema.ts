@@ -1,4 +1,4 @@
-import { InferModel, InferModelFromColumns, relations } from "drizzle-orm";
+import { relations } from 'drizzle-orm';
 import {
   mysqlTable,
   varchar,
@@ -7,19 +7,20 @@ import {
   serial,
   int,
   decimal,
-} from "drizzle-orm/mysql-core";
+  datetime,
+} from 'drizzle-orm/mysql-core';
 
-export const items = mysqlTable("items", {
-  id: serial("id").primaryKey(),
-  name: varchar("name", { length: 256 }).notNull(),
-  description: text("description").notNull(),
-  price: decimal("price", {
+export const items = mysqlTable('items', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 256 }).notNull(),
+  description: text('description').notNull(),
+  price: decimal('price', {
     scale: 2,
     precision: 10,
   }).notNull(),
-  restaurantId: int("restaurantId").notNull(),
+  restaurantId: int('restaurantId').notNull(),
 });
-export type Item = typeof items.$inferSelect
+export type Item = typeof items.$inferSelect;
 export const itemsRelations = relations(items, ({ one }) => ({
   restaurant: one(restaurants, {
     fields: [items.restaurantId],
@@ -27,36 +28,37 @@ export const itemsRelations = relations(items, ({ one }) => ({
   }),
 }));
 
-export const restaurants = mysqlTable("restaurants", {
-  id: serial("id").primaryKey(),
-  name: varchar("name", { length: 256 }),
-  description: text("description"),
+export const restaurants = mysqlTable('restaurants', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 256 }).notNull(),
+  description: text('description').notNull(),
 });
 export const restaurantsRelations = relations(restaurants, ({ many }) => ({
   items: many(items),
 }));
 
-export const orders = mysqlTable("orders", {
-  id: serial("id").primaryKey(),
-  restaurantId: int("restaurantId").notNull(),
-  customerId: int("customerId").notNull(),
+export const orders = mysqlTable('orders', {
+  id: serial('id').primaryKey(),
+  restaurantId: int('restaurantId').notNull(),
+  customerId: int('customerId').notNull(),
+  createdAt: datetime('createdAt').notNull(),
 });
 export const ordersRelations = relations(orders, ({ one, many }) => ({
   restaurant: one(restaurants, {
     fields: [orders.restaurantId],
     references: [restaurants.id],
   }),
-  items: many(items),
+  items: many(orderItems),
   customer: one(users, {
     fields: [orders.customerId],
     references: [users.id],
   }),
 }));
 
-export const orderItems = mysqlTable("orderItems", {
-  id: serial("id").primaryKey(),
-  orderId: int("orderId").notNull(),
-  itemId: int("itemId").notNull(),
+export const orderItems = mysqlTable('orderItems', {
+  id: serial('id').primaryKey(),
+  orderId: int('orderId').notNull(),
+  itemId: int('itemId').notNull(),
 });
 export const orderItemsRelations = relations(orderItems, ({ one, many }) => ({
   order: one(orders, {
@@ -69,8 +71,8 @@ export const orderItemsRelations = relations(orderItems, ({ one, many }) => ({
   }),
 }));
 
-export const users = mysqlTable("customers", {
-  id: serial("id").primaryKey(),
-  email: varchar("email", { length: 256 }).notNull(),
-  passwordHash: varchar("passwordHash", { length: 256 }).notNull(),
+export const users = mysqlTable('customers', {
+  id: serial('id').primaryKey(),
+  email: varchar('email', { length: 256 }).notNull(),
+  passwordHash: varchar('passwordHash', { length: 256 }).notNull(),
 });

@@ -1,17 +1,29 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { auth } from './api/auth/[...nextauth]/route';
+import { db, eq, restaurants } from 'db';
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+  if (session === null) {
+    throw new Error('Session is null');
+  }
+  const restaurant = await db.query.restaurants.findFirst({
+    where: eq(restaurants.id, session.user.id),
+  });
+
+  if (restaurant === null) {
+    throw new Error('Restaurant is null');
+  }
+
   const order = {
-    id: "1",
+    id: '1',
     items: [
       {
-        id: "1",
-        name: "Pizza",
+        id: '1',
+        name: 'Pizza',
       },
       {
-        id: "2",
-        name: "Burger",
+        id: '2',
+        name: 'Burger',
       },
     ],
   };

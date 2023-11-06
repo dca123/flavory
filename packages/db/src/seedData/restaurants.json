@@ -1,0 +1,72 @@
+[
+    {
+      "name": "The Tasty Bistro",
+      "description":
+        "A cozy bistro offering a variety of delicious dishes made with fresh, locally sourced ingredients.",
+      "email": "tastybistro@example.com",
+      "passwordHash": "f3e2d1c4b5a"
+    },
+    {
+      "name": "Spice Palace",
+      "description":
+        "Experience the exotic flavors of the East at Spice Palace, where our skilled chefs prepare authentic dishes from India, Thailand, and beyond.",
+      "email": "spicepalace@example.com",
+      "passwordHash": "5a4b3c2d1e"
+    },
+    {
+      "name": "Mamma Mia Pizzeria",
+      "description":
+        "Serving up mouthwatering pizzas with thin, crispy crusts, topped with the finest ingredients and melted cheese that will make you say 'Mamma Mia!'",
+      "email": "mammamiapizzeria@example.com",
+      "passwordHash": "1b2c3d4e5f"
+    },
+    {
+      "name": "The Seafood Shack",
+      "description":
+        "Indulge in a delectable array of fresh seafood dishes, from succulent grilled fish to creamy seafood pasta, all served in a charming seaside setting.",
+      "email": "seafoodshack@example.com",
+      "passwordHash": "a1b2c3d4e5"
+    },
+    {
+      "name": "Green Leaf Cafe",
+      "description":
+        "At Green Leaf Cafe, we are passionate about serving wholesome, plant-based meals that are as nourishing for the body as they are delicious.",
+      "email": "greenleafcafe@example.com",
+      "passwordHash": "3d4e5f6a1b"
+    },
+    {
+      "name": "Rustic BBQ Joint",
+      "description":
+        "Satisfy your cravings for smoky, finger-licking barbecue at our rustic joint, where we slow-cook our meats to perfection and serve them with savory homemade sauces.",
+      "email": "rusticbbqjoint@example.com",
+      "passwordHash": "6b5a4c3d2e"
+    },
+    {
+      "name": "Café Mornings",
+      "description":
+        "Start your day right with a visit to Café Mornings, where we brew the finest coffee and serve a delightful selection of freshly baked pastries and breakfast classics.",
+      "email": "cafemornings@example.com",
+      "passwordHash": "2c3d4e5f6a"
+    },
+    {
+      "name": "The Sushi Spot",
+      "description":
+        "Experience the art of sushi-making at The Sushi Spot, where our skilled sushi chefs craft delicate rolls and sashimi using the freshest fish and ingredients.",
+      "email": "sushispot@example.com",
+      "passwordHash": "4e3d2c1b5a"
+    },
+    {
+      "name": "La Dolce Vita",
+      "description":
+        "Indulge in the sweet life at La Dolce Vita, where we serve authentic Italian gelato, pastries, and desserts that will transport you to the streets of Rome.",
+      "email": "ladolcevita@example.com",
+      "passwordHash": "b1a2c3d4e5"
+    },
+    {
+      "name": "Fusion Flavors",
+      "description":
+        "Embark on a culinary journey at Fusion Flavors, where we combine the best of various cuisines to create unique and mouthwatering fusion dishes.",
+      "email": "fusionflavors@example.com",
+      "passwordHash": "5c4d3e2f1a"
+    }
+  ]

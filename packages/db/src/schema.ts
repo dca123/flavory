@@ -32,6 +32,8 @@ export const restaurants = mysqlTable('restaurants', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 256 }).notNull(),
   description: text('description').notNull(),
+  email: varchar('email', { length: 256 }).notNull().unique(),
+  passwordHash: varchar('passwordHash', { length: 256 }).notNull(),
 });
 export const restaurantsRelations = relations(restaurants, ({ many }) => ({
   items: many(items),

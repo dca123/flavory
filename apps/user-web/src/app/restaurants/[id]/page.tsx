@@ -1,6 +1,7 @@
 import { db, eq, restaurants } from 'db';
 import { Suspense } from 'react';
 import { MenuItems } from './MenuItems';
+import { OrderBar } from './OrderBar';
 
 export default function Page({ params }: { params: { id: string } }) {
   return (
@@ -44,6 +45,7 @@ async function Menu(props: MenuProps) {
   return (
     <div className="grid grid-cols-3 gap-3">
       <MenuItems items={menuItems} />
+      <OrderBar />
     </div>
   );
 }

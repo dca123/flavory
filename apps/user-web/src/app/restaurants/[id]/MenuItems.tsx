@@ -4,7 +4,7 @@ import { atom, useAtomValue, useSetAtom } from 'jotai';
 import currency from 'currency.js';
 import { MinusCircle, PlusCircle } from 'lucide-react';
 
-const ItemsAtom = atom<ItemModel[]>([]);
+export const ItemsAtom = atom<ItemModel[]>([]);
 const addToItemsAtom = atom(null, (get, set, item: ItemModel) => {
   set(ItemsAtom, [...get(ItemsAtom), item]);
 });
@@ -12,12 +12,6 @@ const removeFromItemsAtom = atom(null, (get, set, item: ItemModel) => {
   set(
     ItemsAtom,
     get(ItemsAtom).filter((i) => i.id !== item.id),
-  );
-});
-const orderSumAtom = atom((get) => {
-  return get(ItemsAtom).reduce(
-    (acc, item) => currency(acc).add(item.price).value,
-    0,
   );
 });
 

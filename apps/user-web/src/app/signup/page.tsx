@@ -1,5 +1,5 @@
-"use client";
-import { Button } from "@/components/ui/button";
+'use client';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -9,11 +9,11 @@ import {
   FormLabel,
   FormMessage,
   useForm,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { useTransition } from "react";
-import { z } from "zod";
-import { createUser } from "./action";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { z } from 'zod';
+import { createUser } from './action';
+import { useFormStatus } from 'react-dom';
 
 const Schema = z.object({
   email: z.string().email(),
@@ -22,12 +22,12 @@ const Schema = z.object({
 export type Schema = z.infer<typeof Schema>;
 
 export default function Page() {
-  const [isPending, startTransition] = useTransition();
   const form = useForm({
     schema: Schema,
   });
+  const { pending } = useFormStatus();
 
-  const onSubmit = (data: Schema) => startTransition(() => createUser(data));
+  const onSubmit = (data: Schema) => createUser(data);
 
   return (
     <div>
@@ -64,7 +64,7 @@ export default function Page() {
             )}
           />
           <Button type="submit">
-            {isPending ? "Creating Account..." : "Create Account"}
+            {pending ? 'Creating Account...' : 'Create Account'}
           </Button>
         </form>
       </Form>

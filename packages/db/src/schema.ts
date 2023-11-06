@@ -19,7 +19,7 @@ export const items = mysqlTable("items", {
   }).notNull(),
   restaurantId: int("restaurantId").notNull(),
 });
-export type Item = InferModel<typeof items>;
+export type Item = typeof items.$inferSelect
 export const itemsRelations = relations(items, ({ one }) => ({
   restaurant: one(restaurants, {
     fields: [items.restaurantId],

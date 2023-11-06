@@ -1,6 +1,5 @@
-import { useSession } from "@/app/useSession";
-import currency from "currency.js";
-import { db, eq, orderItems, orders } from "db";
+import currency from 'currency.js';
+import { db, eq, orderItems, orders } from 'db';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const [orderData, orderItemsData] = await Promise.all([
@@ -21,7 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   const total = orderItemsData.reduce(
     (acc, orderItem) => currency(acc).add(orderItem.item.price).value,
-    0
+    0,
   );
 
   return (

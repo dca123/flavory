@@ -37,6 +37,7 @@ export const restaurants = mysqlTable('restaurants', {
 });
 export const restaurantsRelations = relations(restaurants, ({ many }) => ({
   items: many(items),
+  orders: many(orders),
 }));
 
 export const orders = mysqlTable('orders', {

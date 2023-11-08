@@ -4,6 +4,12 @@ import { db, eq, restaurants } from 'db';
 
 export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
+  cookies: {
+    sessionToken: {
+      name: 'restaurant-web-next-auth.session-token',
+      options: { httpOnly: true, sameSite: 'lax', path: '/', secure: true },
+    },
+  },
   providers: [
     CredentialsProvider({
       credentials: {
@@ -19,7 +25,6 @@ export const authOptions: AuthOptions = {
           console.log('no credentials');
           return null;
         }
-        console.log({ credentials });
         const restaurant = await db.query.restaurants.findFirst({
           where: eq(restaurants.email, credentials.email),
         });
